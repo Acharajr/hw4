@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: Achara_playground_production
+  username: Achara_playground
+  password: <%= ENV["ACHARA_PLAYGROUND_DATABASE_PASSWORD"] %>
