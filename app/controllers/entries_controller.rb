@@ -3,7 +3,7 @@ class EntriesController < ApplicationController
   def new
   end
   def create
-    @user = User.find_by({ "id" => session["user_id"] })
+    @user = User.find_by({ "id" => session["user_id"]})
     if @user != nil
     @entry = Entry.new
     @entry["title"] = params["title"]
